@@ -1,0 +1,41 @@
+.container
+  .row
+  .club-profiles.module.parallax.parallax-profiles.services.row
+    .col-md-12
+      %h1.wow.fadeInUp{"data-wow-duration" => "1s"} Contact Us
+      %p.wow.fadeIn{"data-wow-duration" => "1s"}
+      .col-sm-12.reservation-form
+        %form.form-horizontal{:method => "post"}
+          .form-group
+            %label.col-sm-5.col-xs-12.control-label{:for => "name"} What's your full name?
+            .col-sm-7.col-xs-12.input-field
+              .input-group
+                %input#name.form-control{:onchange => "checkField();", :placeholder => "David Smith", :required => "", :type => "text"}
+                  %span.input-group-addon
+                    %i.fa.fa-user.fa-2x
+          .form-group
+            %label.col-sm-5.col-xs-12.control-label{:for => "phone"} What's your phone number?
+            .col-sm-5.col-xs-12.input-field
+              .input-group
+                %input#phone.form-control{:onchange => "checkField();", :placeholder => "345-555-2398", :required => "", :type => "text"}
+                  %span.input-group-addon.phone-icon
+                    %i.fa.fa-mobile.fa-2x
+          .form-group
+            %label.col-sm-5.col-xs-12.control-label{:for => "location"} Where would you like to stay?
+            .col-sm-6.col-xs-12.input-field
+              .input-group
+                %select#location.form-control{:name => "location"}
+                  %option{:value => ""} Table for 6, club
+                %span.input-group-addon
+                  %i.fa.fa-cube.fa-2x
+          .form-group
+            .col-sm-10.text-center
+              %button.btn.btn-default.btn-lg.btn-booking{:name => "booking", :type => "submit", :value => "booking"} Send!
+/ Make-Reservation
+/ Map
+.container-fluid.margin-top
+  .row.map.wow.fadeIn{"data-wow-delay" => "1s", "data-wow-duration" => "2s", "data-wow-offset" => "200"}
+    #map-canvas
+      %h1.sr-only Map
+/ Map
+
