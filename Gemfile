@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rails', '4.2.1'
+gem 'rails'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -25,6 +25,7 @@ gem 'pundit'
 gem "erb2haml", :group => :development
 gem 'soundcloud'
 gem 'instagram'
+#gem 'instagram',  :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 gem "koala", "~> 2.0"
 gem 'rqrcode_png'  
 gem 'omniauth-facebook'
