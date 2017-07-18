@@ -20,7 +20,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'high_voltage'
-gem 'devise'
+gem 'devise', '~> 4.1.0'
 gem 'pundit'
 gem "erb2haml", :group => :development
 gem 'soundcloud'
