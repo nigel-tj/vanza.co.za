@@ -28,6 +28,12 @@ class FeaturesController < ApplicationController
     @feature = Feature.find(params[:id])
   end
   
+  def destroy
+    feature = Feature.find(params[:id])
+    feature.destroy
+    redirect_to features_path, :notice => "feature deleted."
+  end
+
   private
   def feature_params
     params.require(:feature).permit(:link,:image,:intro,:heading)

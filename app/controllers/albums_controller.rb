@@ -53,7 +53,7 @@ class AlbumsController < ApplicationController
   def destroy
     @album = Album.find(params[:id])
     @album.destroy
-    flash[:notice] = "Successfully destroyed album."
+    flash[:notice] = "Successfully deleted album."
     redirect_to galleries_url
   end
 
