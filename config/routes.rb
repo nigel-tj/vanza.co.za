@@ -59,7 +59,7 @@ Rails.application.routes.draw do
   
   # get '/auth/:provider/callback', to: 'sessions#create'
   # delete '/logout', to: 'sessions#destroy', as: :logout
-
+  match '/visitors' => 'visitors#index', :via => :get
   match '/gallery' => 'visitors#gallery', :via => :get
   match '/gallery/:id' => 'galleries#show_gallery', :via => :get
   match '/music' => 'tracks#music', :via => :get
