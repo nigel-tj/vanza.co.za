@@ -102,5 +102,5 @@ Rails.application.routes.draw do
   match '/admin_show_album/:id' => 'albums#admin_show_album', :via => :get
 
   #root to: 'coming_soon#index'
-  root :to => "albums#new"
+  root :to => "visitors#index"
 end
