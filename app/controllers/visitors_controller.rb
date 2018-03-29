@@ -9,7 +9,7 @@ class VisitorsController < ApplicationController
     #@tracks = Track.order('created_at DESC')
     @featured_tracks = Track.order('created_at DESC')
     @artists = Artist.order('created_at DESC')
-    @eventss = Event.order('created_at DESC')
+    @events = Event.order('created_at DESC')
     # twiiter
         #@tweets = $twitter.search("UpperEchelon12June ", result_type: "recent").take(20)
     
