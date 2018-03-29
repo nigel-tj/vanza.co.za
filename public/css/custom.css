@@ -234,3 +234,14 @@ $secondary: #03A9F4;
 .player .music .song-1 .state i, .player .music .song-2 .state i, .player .music .song-3 .state i, .player .music .song-4 .state i {
   color: #ddd;
 }
+
+.thumbnail_overlay {
+    position: relative;
+}
+
+.caption_thumbnail_overlay {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
