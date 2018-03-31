@@ -14,7 +14,7 @@
                 .grid-item.grid-sizer.col-sm-4.servicebox.featured_club
                   .servicebox-image
                     %a.vid-item.pretty-photo{"data-gal" => "prettyPhoto[gallery-photo-thumb]", :href => "artists/#{artist.id}?#{artist.name}"}
-                      %img{:alt => "#{artist.name}", :src => "#{artist.profile_picture_url}"}
+                      %img{:alt => "#{artist.name}", :src => "#{artist.profile_picture_url(:thumb)}"}
                   .servicebox-inner
                     %p
                       #{artist.name}
