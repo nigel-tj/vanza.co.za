@@ -53,8 +53,8 @@ Rails.application.routes.draw do
   resources :videos
   resources :artists
   resources :events
-  #resources :vip_tickets
-  #resources :standard_tickets
+  resources :vip_tickets
+  resources :standard_tickets
   
   
   # get '/auth/:provider/callback', to: 'sessions#create'

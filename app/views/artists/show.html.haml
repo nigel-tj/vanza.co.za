@@ -3,7 +3,7 @@
     .row
       .profile-header-container
         .profile-header-img
-          %img.img-circle{:src => "#{@artist.profile_picture_url}"}/
+          %img.img-circle{:src => "#{@artist.profile_picture_url(:thumb)}"}/
           / badge
           .rank-label-container
             %span.label.label-default.rank-label.social.affix-social
