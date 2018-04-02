@@ -100,6 +100,7 @@ Rails.application.routes.draw do
   match '/admins' => 'galleries#new', :via => :get
   match '/admin_all_events' => 'events#admin_all_events', :via => :get
   match '/admin_show_album/:id' => 'albums#admin_show_album', :via => :get
+  match '/about' => 'visitors#about', :via => :get
 
   #root to: 'coming_soon#index'
   root :to => "visitors#index"
