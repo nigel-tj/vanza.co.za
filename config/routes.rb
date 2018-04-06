@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   
 
   resources :feature_banners
-  devise_for :admin_users
+  #devise_for :admin_users
   devise_for :users
   devise_for :admins
   resources :lifestyles
@@ -53,8 +53,8 @@ Rails.application.routes.draw do
   resources :videos
   resources :artists
   resources :events
-  #resources :vip_tickets
-  #resources :standard_tickets
+  resources :vip_tickets
+  resources :standard_tickets
   
   
   # get '/auth/:provider/callback', to: 'sessions#create'
@@ -100,6 +100,7 @@ Rails.application.routes.draw do
   match '/admins' => 'galleries#new', :via => :get
   match '/admin_all_events' => 'events#admin_all_events', :via => :get
   match '/admin_show_album/:id' => 'albums#admin_show_album', :via => :get
+  match '/about' => 'visitors#about', :via => :get
 
   #root to: 'coming_soon#index'
   root :to => "visitors#index"
