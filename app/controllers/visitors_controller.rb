@@ -50,6 +50,10 @@ class VisitorsController < ApplicationController
     def portfolio
         render :pdf => "public/docs/Proposal-template.pdf"
     end
+    
+    def contact
+      
+    end
 
     def gallery
       @galleries = Gallery.all
