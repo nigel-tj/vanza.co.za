@@ -43,7 +43,6 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :lifestyles
   resources :albums
-  resources :users
   resources :stores
   resources :tracks
   resources :main_banners
