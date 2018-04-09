@@ -80,12 +80,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => '',
-    :password => '',
-    :address => '',
-    :domain => '',
+    :user_name => 'vanzabzt@vanza.co.za',
+    :password => ']^M[NlGgfq)1',
+    :address => 'mail.vanza.co.za',
+    :domain => 'vanza.co.za',
     :port => '',
-    :authentication => :cram_md5
+    :authentication => :login
   }
 
 end
