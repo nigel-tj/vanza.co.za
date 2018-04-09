@@ -343,7 +343,3 @@ strong {
   }
 }
 
-@media (min-width: 767px)
-.content-section {
-     padding-top: 0px; 
-}
