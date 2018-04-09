@@ -1,0 +1,72 @@
+<section class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+          <h1 class="wow fadeInUp" data-wow-duration="1s">Contact Us</h1>
+          <p class="wow fadeIn" data-wow-duration="1s"></p>
+          <div class="col-sm-12 reservation-form">
+            <form class="form-horizontal" method="post">
+              <div class="form-group">
+                <label class="col-sm-5 col-xs-12 control-label" for="name">What's your full name?</label>
+                <div class="col-sm-7 col-xs-12 input-field">
+                  <div class="input-group">
+                    <input class="form-control" id="name" onchange="checkField();" placeholder="David Smith" type="text">
+                    <span class="input-group-addon">
+                      <i class="fa fa-user fa-2x"></i>
+                    </span>
+                </input>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 col-xs-12 control-label" for="phone">What's your phone number?</label>
+                <div class="col-sm-5 col-xs-12 input-field">
+                  <div class="input-group">
+                    <input class="form-control" id="phone" onchange="checkField();" placeholder="345-555-2398" type="text">
+                    <span class="input-group-addon phone-icon">
+                      <i class="fa fa-mobile fa-2x"></i>
+                    </span>
+                </input>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 col-xs-12 control-label" for="location">Where would you like to stay?</label>
+                <div class="col-sm-6 col-xs-12 input-field">
+                  <div class="input-group">
+                    <select class="form-control" id="location" name="location">
+                      <option>Table for 6, club</option>
+                    </select>
+                    <span class="input-group-addon">
+                      <i class="fa fa-cube fa-2x"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10 text-center">
+                  <button class="btn btn-default btn-lg btn-booking" name="booking" type="submit" value="booking">Send!</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Make-Reservation
+      -->
+    <!-- Map
+      -->
+    <div class="container-fluid margin-top">
+      <div class="row map wow fadeIn" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="200">
+        <div id="map-canvas">
+          <h1 class="sr-only">Map</h1>
+        </div>
+      </div>
+    </div>
+    <!-- Map
+      -->
+  </div>
+</section>
