@@ -137,7 +137,11 @@
                         <a href="/contact">Contact</a>
                     </li>
                      <li class="page-scroll">
-                        <a href="/users/sign_in">Sign in</a>
+                       <% if user_signed_in? %>
+                       <a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i><%= current_user.email%></a>
+                       <% else %>
+                       <a href="/users/sign_in">Sign in</a>
+                       <% end %>
                     </li>
                     
                 </ul>
