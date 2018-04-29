@@ -60,9 +60,6 @@ ActiveRecord::Schema.define(version: 20180422174246) do
     t.string   "artist_name"
   end
 
-# Could not dump table "artists" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "dowload_logs", force: :cascade do |t|
     t.integer  "download_id"
     t.datetime "download_date"
