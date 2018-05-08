@@ -1,12 +1,12 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-
+#require 'action_cable/engine'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups(:assets => %w(development test)))
+Bundler.require(*Rails.groups(:assets => %w(development test production)))
 
-module Redvillage
+module Samo
   class Application < Rails::Application
      
   config.generators do |g|
@@ -29,7 +29,8 @@ module Redvillage
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
-    config.active_record.observers = :video_observer
+    #config.active_record.raise_in_transactional_callbacks = true
+  config.active_record.observers = :video_observer
+  config.autoload_paths += %W(#{config.root}/app/channels)
   end
 end

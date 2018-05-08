@@ -66,3 +66,4 @@ gem 'carrierwave'
 gem "rmagick"
 gem 'kaminari'
 gem 'omniauth-facebook'
+gem 'actioncable', github: 'rails/actioncable', branch: 'archive'
