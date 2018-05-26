@@ -1,21 +1,41 @@
-%script{:src => "/scripts/masonry.pkgd.min.js", :type => "text/javascript"}
-%script{:src => "/scripts/isotope.pkgd.min.js", :type => "text/javascript"}
-%script{:src => "/scripts/isotope.init.js", :type => "text/javascript"}
+<script src='/scripts/masonry.pkgd.min.js' type='text/javascript'></script>
+<script src='/scripts/isotope.pkgd.min.js' type='text/javascript'></script>
+<script src='/scripts/isotope.init.js' type='text/javascript'></script>
 
-.container
-  .row.module.parallax.parallax-profiles
-    .col-md-12
-      %h1.wow.fadeInUp{"data-wow-duration" => "1s"} Redvillage TV
-    .row
-      #player.col-sm-9
-        :javascript
+<section class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="brand-heading">VANZA VIDEO PLAYLIIST</h1>
+          <p class="intro-text">See the african heart beat</p>
+          <div class="page-scroll">
+            <a href="#about" class="btn btn-circle">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class='container'>
+  <div class='row module parallax parallax-profiles'>
+    <div class='col-md-12'>
+      <h1 class='wow fadeInUp' data-wow-duration='1s'>Vanza Entertainment TV</h1>
+    </div>
+    <div class='row'>
+      <div class='col-sm-9' id='player'>
+        <script>
           // 2. This code loads the IFrame Player API code asynchronously.
           var tag = document.createElement('script');
-
+          
           tag.src = "https://www.youtube.com/iframe_api";
           var firstScriptTag = document.getElementsByTagName('script')[0];
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
+          
           // 3. This function creates an <iframe> (and YouTube player)
           //    after the API code downloads.
           var player;
@@ -29,12 +49,12 @@
               }
             });
           }
-
+          
           // 4. The API will call this function when the video player is ready.
           function onPlayerReady(event) {
             <!-- event.target.getPlayList(); -->
           }
-
+          
           // 5. The API calls this function when the player's state changes.
           //    The function indicates that when playing a video (state=1),
           //    the player should play for six seconds and then stop.
@@ -51,18 +71,18 @@
           function playVideo(videoId) {          
             player.loadVideoById(videoId, 0, "medium");
           }
-      .col-md-3
-        #video_carousel.flexslider
-          %ul.slides
-            -for video in @videos
-              %li
-                .vid-item
-                  .thumb
-                    %a{:href => "#{video.link}", :onclick => "playVideo('#{video.uid}')"}
-                      %img{:src => "https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg"}
-                      .desc
-                        #{video.title}
-:javascript
+        </script>
+      </div>
+      <div class='col-md-3'>
+        <div class='flexslider' id='video_carousel'>
+          <ul class='slides'>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
   $(document).ready(function(){
     $('#video_carousel').flexslider({
       animation: "slide",
@@ -74,7 +94,6 @@
       itemMargin: 1,
       asNavFor: '#slider'
     });
- 
+  
   })
-
-
+</script>
