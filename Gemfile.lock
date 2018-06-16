@@ -47,6 +47,12 @@ GEM
       activemodel (= 4.2.10)
       activesupport (= 4.2.10)
       arel (~> 6.0)
+    activerecord-session_store (1.1.1)
+      actionpack (>= 4.0)
+      activerecord (>= 4.0)
+      multi_json (~> 1.11, >= 1.11.2)
+      rack (>= 1.5.2, < 3)
+      railties (>= 4.0)
     activesupport (4.2.10)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -107,6 +113,7 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.2)
     em-hiredis (0.3.1)
       eventmachine (~> 1.0)
       hiredis (~> 0.6.0)
@@ -272,6 +279,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    oauth (0.5.4)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
       jwt (~> 1.0)
@@ -281,15 +289,25 @@ GEM
     omniauth (1.8.1)
       hashie (>= 3.4.6, < 3.6.0)
       rack (>= 1.6.2, < 3)
-    omniauth-facebook (5.0.0)
+    omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (0.5.3)
-      jwt (>= 1.5)
+    omniauth-github (1.3.0)
+      omniauth (~> 1.5)
+      omniauth-oauth2 (>= 1.4.0, < 2.0)
+    omniauth-google-oauth2 (0.4.1)
+      jwt (~> 1.5.2)
+      multi_json (~> 1.3)
       omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.5)
+      omniauth-oauth2 (>= 1.3.1)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.5.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -459,6 +477,7 @@ PLATFORMS
 DEPENDENCIES
   actioncable!
   active_type (= 0.3.1)
+  activerecord-session_store (~> 1.0)
   autoprefixer-rails
   better_errors
   binding_of_caller
@@ -467,6 +486,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   devise (~> 4.1.0)
+  dotenv (~> 2.2.1)
   erb2haml
   faker
   font-awesome-sass
@@ -484,8 +504,10 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   minitest-reporters
-  omniauth-facebook
-  omniauth-google-oauth2
+  omniauth-facebook (~> 4.0)
+  omniauth-github (~> 1.1, >= 1.1.2)
+  omniauth-google-oauth2 (~> 0.4.1)
+  omniauth-twitter (~> 1.2, >= 1.2.1)
   pry-byebug
   pry-rails
   pundit

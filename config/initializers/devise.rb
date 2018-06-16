@@ -258,5 +258,11 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.secret_key = '482eff324eec43b437b51e0be229c90dcc915dbff12e9644b704dee7f85f3788412c38010154fcb33e94ff0e1e70b7c4765d312d0827384b761a4ac16eb19359'
-  config.omniauth :facebook, "565641447162392", "4fa001a3e8eaad45f8b4290b1b431eee"
+  #config.omniauth :facebook, "565641447162392", "4fa001a3e8eaad45f8b4290b1b431eee"
+  
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'public_profile,email'
+  #config.omniauth :github, ENV['GITHUB_APP_ID'], ENV['GITHUB_APP_SECRET'], scope: 'user,public_repo'
+  config.omniauth :google_oauth2, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_APP_SECRET'], scope: 'userinfo.email,userinfo.profile'
+  config.omniauth :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET']
+  
 end

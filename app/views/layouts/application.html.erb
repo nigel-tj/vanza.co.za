@@ -23,6 +23,32 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body style="" data-target=".navbar-custom" data-spy="scroll" id="page-top">
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '565641447162392',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+      
+    FB.AppEvents.logPageView();
+    
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
     <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">

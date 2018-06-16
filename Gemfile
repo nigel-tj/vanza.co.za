@@ -28,7 +28,7 @@ gem 'instagram'
 #gem 'instagram',  :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 gem "koala", "~> 2.0"
 gem 'rqrcode_png'  
-gem 'omniauth-facebook'
+#gem 'omniauth-facebook'
 group :development do
   gem 'guard-bundler'
   gem 'guard-minitest'
@@ -43,6 +43,8 @@ group :development do
   gem 'rails_layout'
   gem 'rails_best_practices'
   gem 'rails_apps_pages'
+  # Use Dotenv for environment variables
+  gem 'dotenv', '~> 2.2.1'
 end
 gem 'haml-rails'
 gem 'twitter'
@@ -59,11 +61,21 @@ end
 gem 'yt', '~> 0.13.7'
 gem 'autoprefixer-rails'
 gem 'rails-observers'
-gem 'omniauth-google-oauth2'
+#gem 'omniauth-google-oauth2'
 gem 'active_type', '0.3.1'
 #gem 'rails-gallery'
 gem 'carrierwave'
 gem "rmagick"
 gem 'kaminari'
-gem 'omniauth-facebook'
+#gem 'omniauth-facebook'
 gem 'actioncable', github: 'rails/actioncable', branch: 'archive'
+# Use Omniauth Facebook plugin
+gem 'omniauth-facebook', '~> 4.0'
+# Use Omniauth Github plugin
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
+# Use Omniauth Google plugin
+gem 'omniauth-google-oauth2', '~> 0.4.1'
+# Use Omniauth Twitter plugin
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+# Use ActiveRecord Sessions
+gem 'activerecord-session_store', '~> 1.0'
